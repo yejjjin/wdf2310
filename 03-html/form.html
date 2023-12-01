@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about form</title>
+  </head>
+  <body>
+    <h1>about form</h1>
+
+    <h2>form 기초</h2>
+    <form action="">
+      <fieldset>
+        <legend>폼 타이틀</legend>
+        아이디<input
+          type="text"
+          title="아이디"
+          size="30"
+          maxlength="8"
+          placeholder="아이디를 입력하세요.(8자이하)"
+          autofocus
+          autocomplete="on"
+        />
+        <br /><br />
+
+        <label for="name">이름</label>
+        <input type="text" id="name" /> <br /><br />
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" /> <br /><br />
+
+        라디오
+        <input type="radio" name="html" id="html" />
+        <label for="html">html</label>
+        <input type="radio" name="css" id="css" />
+        <label for="css">css</label>
+        <input type="radio" name="js" id="js" />
+        <label for="js">js</label>
+        <br /><br />
+
+        <label for="number">숫자</label>
+        <input type="number" name="number" id="number" /> <br /><br />
+
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" /><br /><br />
+
+        <label for="">첨부파일</label>
+        <input type="file" name="file" id="file" /> <br /><br />
+
+        <label for="sel">계절선택</label>
+        <select name="sel" id="sel" multiple>
+          <option value="봄">봄</option>
+          <option value="여름">여름</option>
+          <option value="가을">가을</option>
+          <option value="겨울">겨울</option>
+        </select>
+        <br /><br />
+
+        <label for="text">글쓰기</label>
+        <textarea
+          name="text"
+          id="text"
+          cols="30"
+          rows="5"
+          placeholder="100자까지 작성 가능."
+        ></textarea>
+        <br /><br />
+
+        <!--기능이 없는 버튼-->
+        <!--a(하이퍼링크) : 페이지 전환용-->
+        <!--input:button , button : 동적 처리-->
+
+        <input type="button" value="input 버튼" />
+        <button><b>button</b> 타입 버튼</button>
+        <br /><br />
+
+        <input type="submit" value="내용 전송" />
+        <input type="reset" value="취소" /> <br /><br />
+      </fieldset>
+    </form>
+  </body>
+</html>
