@@ -25,8 +25,14 @@
     <div class="bg2"></div>
     <style>
       .bg2 {
-        height: 300px;
+        height: 440px;
         background-image: url(./images/map.jpg);
+        background-position: -700px 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: yellow;
+
+        background: yellow url("./images/map.jpg") no-repeat -700px fixed;
       }
     </style>
     <div class="bg3"></div>
@@ -37,6 +43,70 @@
         background-image: url(./images/w.jpg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
+      }
+    </style>
+
+    <h2>background-size</h2>
+
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+
+    <style>
+      .bg4 {
+        width: 300px;
+        height: 150px;
+        background-color: hotpink;
+        background-image: url(./images/youtube.png);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        /* background-size: 100% auto; */
+        background-size: contain;
+        /* contain : 배경이 잘리지 않고 박스 안에 배경을 모두 보이게 : 로고, 이미지 */
+      }
+
+      .bg5 {
+        width: 300px;
+        height: 300px;
+        background: yellowgreen url(./images/map.jpg) no-repeat 0 0 / 300px auto;
+      }
+      /* cover : 배경이미지 채울 때 */
+    </style>
+
+    <h2>image sprites</h2>
+    <a href="#" class="link home">홈</a>
+    <a href="#" class="link prev">이전</a>
+    <a href="#" class="link next">다음</a>
+
+    <style>
+      .link {
+        display: block;
+        text-indent: -9999px;
+        height: 44px;
+        background-image: url(./images/img_navsprites.gif);
+        background-repeat: no-repeat;
+      }
+      .home {
+        width: 43px;
+        background-position: 0 0;
+      }
+      .prev {
+        width: 42px;
+        background-position: -48px 0;
+      }
+      .next {
+        width: 46px;
+        background-position: -91px 0;
+      }
+    </style>
+
+    <div class="webtoon">네이버 웹툰</div>
+
+    <style>
+      .webtoon {
+        text-indent: -9999px;
+        width: 65px;
+        height: 58px;
+        background: url(./images/네이버\ 아이콘\ 이미지.png) no-repeat -462px -432px;
       }
     </style>
   </body>
