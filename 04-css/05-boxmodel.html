@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>boxmodel</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
   </head>
   <body>
     <h1>boxmodel</h1>
@@ -24,14 +25,203 @@
 
     <h2>width (100%) height (0)</h2>
 
+    <!-- block 요소 widht 100% height 0 -->
+    <div class="box2">contents</div>
+    <div class="box2">contents</div>
     <div class="box2">contents</div>
 
     <style>
       .box2 {
-        width: 300px;
-        height: 100px;
+        width: 50%;
+        /* width: 300px;
+        height: 100px; */
         background-color: lemonchiffon;
       }
     </style>
+
+    <!-- inline 요소 : 가로세로사이즈가 글자 하나랑 같아서 가로세로 사이즈 안먹음 -->
+    <span class="box3">inline</span>
+    <span class="box3">inline</span>
+    <span class="box3">inline</span>
+    <style>
+      .box3 {
+        /* width: 100%;
+        height: 50px; */
+        background-color: lavender;
+      }
+    </style>
+
+    <!-- inline block -->
+    <span class="box4">inline-block</span>
+    <span class="box4">inline-block</span>
+    <span class="box4">inline-block</span>
+
+    <style>
+      .box4 {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background-color: mintcream;
+      }
+    </style>
+
+    <h2>max-widht(최대 가로 사이즈)</h2>
+    <!-- wrap 꾸밀 때 -->
+
+    <div class="maxw">max-widht</div>
+    <div class="minw">min-widht</div>
+    <style>
+      .minw {
+        background-color: palegoldenrod;
+        min-width: 320px;
+        min-height: 100vh;
+      }
+      .maxw {
+        background-color: cornflowerblue;
+        max-width: 1280px;
+        max-height: 500px;
+        height: 100px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <h2>border</h2>
+
+    <div class="border">border</div>
+
+    <style>
+      .border {
+        height: 300px;
+        background-color: #eee;
+        /* border-style: dashed;
+        border-width: 5px;
+        border-color: rgba(255, 0, 0, 0.5); */
+        /* border: 1px solid rgba(255, 0, 0, 0.5); */
+        /* border: none; */
+        border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+      }
+    </style>
+
+    <h2>border-radius</h2>
+    <div class="radius"></div>
+
+    <style>
+      .radius {
+        background-color: skyblue;
+        height: 200px;
+        width: 100%;
+        border-radius: 200px;
+      }
+    </style>
+
+    <h2>padding</h2>
+
+    <div class="padding">padding</div>
+    <div class="padding">padding aaaa</div>
+    <div class="padding">padding</div>
+    <style>
+      /* 유동적인 바튼을 생성하고 싶을 땐
+      display : inline-block으로 변경해서
+      widht100% 변경해제 */
+      .padding {
+        display: inline;
+        border: 3px solid pink;
+        background-color: powderblue;
+        padding: 20px;
+      }
+    </style>
+
+    <div class="padding2">padding2</div>
+    <style>
+      .padding2 {
+        background-color: blanchedalmond;
+        margin-top: 50px;
+        border: 1px solid palegreen;
+        padding: 20px 30px 40px;
+      }
+    </style>
+
+    <h2>margin</h2>
+    <div class="margin">margin</div>
+    <div class="margin box">margin</div>
+    <div class="margin">margin</div>
+    <style>
+      .margin {
+        margin: 60px;
+        border: 1px solid plum;
+        background-color: turquoise;
+      }
+
+      .box {
+        margin-top: 120px;
+      }
+    </style>
+
+    <div class="margin1">
+      block 요소 가운데 정렬
+
+      <div class="margin2">가운데 정렬</div>
+    </div>
+    <style>
+      .margin1 {
+        margin: auto;
+        width: 500px;
+        height: 100px;
+        border: 3px solid lightgoldenrodyellow;
+        background-color: khaki;
+        text-align: center;
+      }
+      .margin2 {
+        width: 50%;
+        margin: auto;
+      }
+    </style>
+
+    <div class="wrap">
+      <header class="header">header</header>
+      <body>
+        <div class="slide">slide</div>
+        <div class="main">main</div>
+      </body>
+      <footer class="footer">footer</footer>
+    </div>
+    <style>
+      .wrap {
+        width: 1200px;
+        margin: 200px auto 0;
+        background-color: palegoldenrod;
+        text-align: center;
+      }
+
+      .header {
+        height: 100px;
+        border-bottom: 5px solid black;
+        padding: 30px;
+        box-sizing: border-box;
+        /* box-sizing: content-box; */
+      }
+
+      .slide {
+        height: 300px;
+        border: 5px solid pink;
+        padding: 30px;
+      }
+
+      .main {
+        height: 200px;
+        width: 90%;
+        margin: 20px auto;
+        border: 5px solid greenyellow;
+        padding-top: 70px;
+      }
+
+      .footer {
+        height: 100px;
+        border: 5px solid lightskyblue;
+        padding: 30px;
+      }
+    </style>
+
+    <br /><br /><br />
   </body>
 </html>
