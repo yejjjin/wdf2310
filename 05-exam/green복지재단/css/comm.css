@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.wrap {
+  width: 1200px;
+  background-color: #ffffff;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: #fff;
+  align-items: center;
+}
+
+#logo a {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+#gnb .depth1 {
+  display: flex;
+}
+
+#gnb .depth1:hover .depth2 {
+  display: block;
+  text-align: center;
+}
+
+#gnb .depth2 {
+  display: none;
+}
+
+#gnb .depth1 > li > a {
+  display: flex;
+  padding: 0 30px;
+  align-items: center;
+}
+
+.slide a {
+  height: 300px;
+  display: flex;
+}
+
+.slide ul {
+  display: flex;
+}
+
+#main {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec-g {
+  /* display: flex; */
+  /* flex-grow: 1;
+  flex-basis: 0; */
+  width: 33.333%;
+  height: 200px;
+  padding: 0;
+}
+
+.sec-g .sec-tit {
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.sec-gy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-g .sec-bbs {
+  display: block;
+}
+
+.sec-bbs .list-bbs {
+  display: block;
+  padding: 0 10px;
+}
+
+.list-gy {
+  display: flex;
+  gap: 20px;
+}
+
+.sec-gy .list-gy li {
+  /* display: flex; */
+  width: 33.3333%;
+}
+
+.list-gy li a {
+  display: flex;
+  height: 120px;
+}
+
+.sec-g .sec-gy {
+  display: flex;
+}
+
+.sec-gy .sec-tit,
+.sec-bnr .sec-tit {
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 0;
+  margin-bottom: 0;
+}
+
+.sec-bnr a {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}
+
+#footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
