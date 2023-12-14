@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float</title>
+  </head>
+  <body>
+    <h1>float</h1>
+    <!-- 하늘에 떠 있는 속성 -->
+
+    <h2>float:left</h2>
+
+    <div class="box1">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+    </div>
+
+    <div class="box2">Lorem ipsum dolor sit amet.</div>
+
+    <style>
+      .box2 {
+        background-color: orange;
+        clear: both;
+      }
+    </style>
+
+    <style>
+      .box1 .item {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        /* display: inline-block; 사이사이 공간이 생김 */
+        float: left;
+      }
+    </style>
+
+    <br /><br /><br /><br />
+
+    <h2>float layout</h2>
+    <div class="wrap">
+      <div id="header">
+        <h1 id="logo">logo</h1>
+        <nav id="gnb">
+          <ul>
+            <li>memu1</li>
+            <li>memu2</li>
+            <li>memu3</li>
+            <li>memu4</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slide">
+        <ul>
+          <li>slide1</li>
+          <li>slide2</li>
+          <li>slide3</li>
+        </ul>
+      </div>
+      <div id="main">
+        <section class="sec-g">공지사항</section>
+        <section class="sec-g">배너</section>
+        <section class="sec-g">바로가기</section>
+      </div>
+      <div id="footer">
+        <div class="logo">logo</div>
+        <div class="copyright">copyright</div>
+        <div class="sns">sns</div>
+      </div>
+    </div>
+
+    <style>
+      .wrap {
+        width: 1280px;
+        margin: 0 auto;
+        background-color: #eee;
+      }
+
+      #header {
+        /* 1. 부모에게 높이값 지정 */
+        height: 100px;
+        background-color: lightyellow;
+      }
+
+      #logo {
+        background-color: lightskyblue;
+        float: left;
+      }
+
+      #gnb {
+        float: right;
+        background-color: palevioletred;
+      }
+
+      #gnb li {
+        float: left;
+      }
+
+      .slide li {
+        float: left;
+      }
+
+      .slide ul {
+        overflow: auto;
+      }
+
+      .sec-g {
+        width: 30%;
+        height: 200px;
+        background-color: lawngreen;
+        float: left;
+        box-sizing: border-box;
+      }
+
+      .sec-g + .sec-g {
+        margin-left: 5%;
+      }
+
+      #main::after {
+        content: "";
+        display: block;
+        /* clear: both = float 해제 */
+        clear: both;
+      }
+
+      .logo {
+        background-color: cornflowerblue;
+        float: left;
+      }
+
+      .copyright {
+        background-color: plum;
+        text-align: center;
+      }
+
+      .sns {
+        background-color: palegoldenrod;
+        float: right;
+        margin-top: -21px;
+      }
+    </style>
+
+    <br /><br /><br />
+  </body>
+</html>
