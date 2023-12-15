@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      .container {
+        background: lightblue;
+        /* height: 200vh; */
+        position: relative;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>position</h1>
+    <div class="container relative">
+      <div class="inner">
+        <div class="box">static</div>
+        <div class="box rel1">relative1</div>
+        <div class="box rel2">relative2</div>
+        <div class="box rel3">relative3</div>
+
+        <!-- relative : 나 자신이 기준 (기준을 절대값으로 사용x) -->
+        <style>
+          .rel1,
+          .rel2,
+          .rel3 {
+            position: relative;
+          }
+          /* .rel2 {
+          right: 0;
+          top: 400px;
+        } */
+        </style>
+        <div class="box abs1">absolute1</div>
+        <div class="box-rel">
+          <div class="box abs2">absolute2</div>
+          <div class="box abs3">absolute3</div>
+        </div>
+      </div>
+
+      <style>
+        /* absolute : 절대값으로 위치 지정 */
+        /* 기준은 나와 가장 가까운 부모 */
+        .abs1 {
+          position: absolute;
+          top: 150px;
+          right: 0;
+          background-color: honeydew;
+          z-index: 1;
+        }
+        .abs2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        .abs3 {
+          position: absolute;
+          top: 100px;
+          left: -120px;
+        }
+
+        .box-rel {
+          width: 400px;
+          height: 400px;
+          background-color: mediumslateblue;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+        .inner {
+          position: relative;
+        }
+      </style>
+
+      <div class="fixed">fixed</div>
+      <!-- fixed 기준 : body -->
+      <style>
+        .fixed {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          /* right: 0;
+          bottom: 0; */
+          width: 100%;
+          height: 80px;
+          background-color: hotpink;
+        }
+      </style>
+
+      <div class="rel">
+        <div class="sticky sticky1">sticky</div>
+      </div>
+      <div class="rel">
+        <div class="sticky sticky1">sticky</div>
+      </div>
+      <div class="rel">
+        <div class="sticky sticky1">sticky</div>
+      </div>
+    </div>
+
+    <style>
+      .rel {
+        position: relative;
+        height: 100vh;
+        background: lightsalmon;
+        border: 5px solid yellow;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background: blue;
+      }
+    </style>
+
+    <h2 class="h2">가운데 정렬</h2>
+    <div class="center">
+      <div class="item">가운데 정렬</div>
+    </div>
+
+    <style>
+      .center {
+        height: 500px;
+        background-color: aqua;
+        position: relative;
+        z-index: 100;
+        margin-bottom: 500px;
+      }
+      .center .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        /* margin: -100px 0 0 -100px; */
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        text-align: center;
+        line-height: 200px;
+      }
+      .h2 {
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

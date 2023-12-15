@@ -8,20 +8,44 @@
   <body>
     <h1>overflow</h1>
     <div class="box1">
-      <div class="item1">1</div>
-      <div class="item2">2</div>
-      <div class="item3">3</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
     </div>
 
     <style>
       .box1 {
+        overflow-x: auto;
         width: 100px;
-        /* overflow: hidden; */
         display: flex;
+        border: 1px solid red;
       }
+
       .item {
         width: 100px;
+        height: 100px;
         background-color: tomato;
+        flex-shrink: 0;
+      }
+    </style>
+
+    <h2>이용약관</h2>
+    <div class="container">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor mollitia
+      veniam in dolores repellendus eveniet, quod consequatur odit fuga deserunt
+      facilis incidunt vel quidem molestias aspernatur voluptatem harum ut ipsa.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, mollitia
+      provident deserunt laborum deleniti voluptates dolores vitae autem sequi
+      commodi hic veniam maiores illo adipisci? Ipsa ducimus et quis architecto.
+    </div>
+
+    <style>
+      .container {
+        border: 5px solid red;
+        max-width: 500px;
+        height: 80px;
+        margin: 0 auto;
+        overflow: auto;
       }
     </style>
   </body>

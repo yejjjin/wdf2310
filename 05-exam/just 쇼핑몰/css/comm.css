@@ -36,13 +36,32 @@ header {
   /* gap: 50px; a태그 넓혀줌 */
 }
 
-#gnb .depth1 :hover .depth2 {
-  background-color: #fff;
+#gnb .depth1 li {
+  position: relative;
+}
+
+/* #gnb .depth1:hover .depth2 전체메뉴 보이게 li잡으면 각각의 메뉴 */
+#gnb .depth1 li:hover .depth2 {
+  /* background-color: #fff; */
   display: block;
 }
 
 #gnb .depth2 {
   display: none;
+  background-color: honeydew;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: 1000;
+  /* width: 100%; = right 0*/
+  right: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#gnb .depth2 a {
+  display: block;
+  padding: 3px 0;
 }
 
 #gnb .depth1 > li > a {
@@ -50,10 +69,20 @@ header {
   align-items: center;
   padding: 0 30px;
   height: 100px;
+  padding: 0 50px;
+}
+
+.slide {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
 }
 
 .slide ul {
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* .slide ul a {
