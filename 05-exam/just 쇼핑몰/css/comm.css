@@ -171,3 +171,8 @@ header {
   align-items: center;
   border-top: 1px solid #000;
 }
+
+.swiper {
+  /* width: 600px; 가로값 설정 안하면 100%가 기본값 */
+  height: 300px;
+}

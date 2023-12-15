@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>just쇼핑몰</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/comm.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="./js/comm.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -55,25 +61,45 @@
           </ul>
         </nav>
       </header>
-      <div class="slide">
-        <ul>
-          <li>
-            <a href="#">
-              <img src="./images/slide1.png" alt="이미지 설명" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./images/slide2.png" alt="이미지 설명2" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./images/slide3.jpg" alt="이미지 설명3" />
-            </a>
-          </li>
-        </ul>
+      <!-- <div class="slide"> -->
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
+      <!-- <ul>
+        <li>
+          <a href="#">
+            <img src="./images/slide1.png" alt="이미지 설명" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/slide2.png" alt="이미지 설명2" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/slide3.jpg" alt="이미지 설명3" />
+          </a>
+        </li>
+      </ul> -->
+      <!-- </div> -->
       <!-- main header footer : id값 -->
       <main id="main">
         <!--공지사항 섹션-->
