@@ -10,18 +10,38 @@
   list-style: none;
 }
 
-.wrap {
-  width: 1200px;
-  margin: auto;
-  background-color: mintcream;
+/* 공통 : 텍스트 시각장애인용 (일반인에겐 아이콘이나 이미지로 보임) 숨김텍스트*/
+.blind {
+  position: absolute;
+  text-indent: -99999px;
+  font-size: 0;
+  line-height: 0;
 }
 
-header {
+.wrap {
+  /* 최대 1200px까지 늘어남 */
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 980px) {
+  .wrap {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .wrap {
+    padding: 0 15px;
+  }
+}
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  background-color: powderblue;
+  background-color: #fff;
 }
 
 #logo a {
@@ -29,6 +49,7 @@ header {
   height: 40px;
   display: flex;
   align-items: center;
+  font-size: 20px;
 }
 
 #gnb .depth1 {
@@ -70,6 +91,38 @@ header {
   padding: 0 30px;
   height: 100px;
   padding: 0 50px;
+}
+
+/* tablet */
+@media screen and (max-width: 980px) {
+  #header {
+    height: auto;
+    flex-direction: column;
+  }
+  #logo a {
+    height: auto;
+    justify-content: center;
+    /* margin-top: 20px; */
+    padding: 20px 0 10px;
+  }
+  #gnb .depth1 > li > a {
+    height: 50px;
+    white-space: nowrap;
+  }
+  #gnb .depth2 {
+    top: 50px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 430px) {
+  #gnb .depth1 > li > a {
+    padding: 0 20px;
+  }
+  #gnb {
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 .slide {
@@ -164,6 +217,27 @@ header {
   line-height: 85px;
 }
 
+@media screen and (max-width: 980px) {
+  #main {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .sec-g {
+    flex-basis: auto;
+    flex-grow: 0;
+  }
+  .sec-bbs {
+    width: 100%;
+  }
+  .sec-bnr,
+  .sec-goto {
+    /* gap 20px 빼고 width설정 */
+    /* width: 48%; */
+    width: calc(100% / 2 - 10px);
+  }
+}
+
 #footer {
   display: flex;
   justify-content: space-between;
@@ -172,7 +246,76 @@ header {
   border-top: 1px solid #000;
 }
 
+@media screen and (max-width: 980px) {
+  #footer {
+    background-color: #eee;
+    height: auto;
+    display: block;
+    /* display block = direction */
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
 .swiper {
   /* width: 600px; 가로값 설정 안하면 100%가 기본값 */
   height: 300px;
+}
+
+.dimmed {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0; */
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+
+.modal {
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -250px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #999;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal .modal-hd {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal .btn-close {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border: none;
+}
+
+.modal .i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.modal .btn-close::after {
+  content: "\f00d";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 2rem;
 }
