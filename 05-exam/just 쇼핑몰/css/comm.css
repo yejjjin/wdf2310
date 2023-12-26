@@ -114,12 +114,20 @@
   padding: 3px 0;
 }
 
+#gnb .depth2 a:hover {
+  color: red;
+}
+
 #gnb .depth1 > li > a {
   display: flex;
   align-items: center;
   padding: 0 30px;
   height: 100px;
   padding: 0 50px;
+}
+
+#gnb .depth1 > li > a:hover {
+  background-color: red;
 }
 
 /* tablet */
