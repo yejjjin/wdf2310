@@ -348,3 +348,35 @@
   font-weight: 900;
   font-size: 2rem;
 }
+
+.slide ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: ani-slide 10s linear infinite;
+}
+
+@keyframes ani-slide {
+  0% {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  32% {
+    left: -100%;
+  }
+  62% {
+    left: -100%;
+  }
+  64% {
+    left: -200%;
+  }
+  98% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
