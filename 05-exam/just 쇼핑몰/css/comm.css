@@ -388,3 +388,7 @@
     left: 0;
   }
 }
+
+#footer .logo img {
+  filter: grayscale(100%);
+}
