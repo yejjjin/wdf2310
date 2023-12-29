@@ -26,7 +26,7 @@ $(function () {
   // sec-tit 클릭했을 때
   $("#tabs .sec-tit").on("click", function () {
     // 기존 .active 삭제
-    $("#tabs .sec-g").removeClass("active");
+    $("#tabs .sec-g").removeClass(".active");
     // this (그 아이)의 부모에게 .active 추가
     $(this).parent().addClass("active");
   });

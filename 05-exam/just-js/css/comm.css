@@ -79,21 +79,12 @@
   position: relative;
 }
 
-/* #gnb .depth1:hover .depth2 전체메뉴 보이게 li잡으면 각각의 메뉴 */
-#gnb .depth1 li:hover .depth2 {
-  /* background-color: var(--white); */
-  /* display: block; = none 주석처리 */
-  opacity: 1;
-  visibility: visible;
-  max-height: 300px;
-  padding: 20px 0;
-}
-
 #gnb .depth2 {
+  display: none;
   padding: 0;
   /* max-height 글자 늘어나도 그만큼 박스가 늘어나게 */
   max-height: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: honeydew;
   position: absolute;
   left: 0;
@@ -105,8 +96,8 @@
   padding: 10px 0;
   /* display none 대신 */
   /* opacity: 0; */
-  visibility: hidden;
-  transition: all 0.3s;
+  /* visibility: hidden;
+  transition: all 0.3s; */
 }
 
 #gnb .depth2 a {
@@ -211,18 +202,18 @@
   width: 50%;
 }
 
+.tabs .tab-cont {
+  display: none;
+}
+
 .tabs .sec-tit {
   background-color: lightblue;
   text-align: center;
   padding: 5px 3px;
 }
-/* 비활성화 탭 */
-.tabs .tab-cont {
-  display: none;
-}
+
 /* 활설화 탭 */
 .tabs .active .sec-tit {
-  display: block;
   background-color: midnightblue;
   color: #fff;
 }
@@ -232,6 +223,7 @@
 }
 
 .tabs .tab-cont {
+  /* display: none; */
   position: absolute;
   top: 48px;
   left: 0;

@@ -1,6 +1,11 @@
 // html페이지를 로드한 후 실행 = defer
 // $(document).ready(function() {})
 $(function () {
+  // gnb
+  $("#gnb .depth1 > li").on("mouseenter", function () {
+    $(this).find(".depth2").stop().slideDown(300);
+  });
+
   //  modal
   //  모달창 열기
   // .list-bbs li:first-child 클릭했을 때
@@ -26,7 +31,7 @@ $(function () {
   // sec-tit 클릭했을 때
   $("#tabs .sec-tit").on("click", function () {
     // 기존 .active 삭제
-    $("#tabs .sec-g").removeClass("active");
+    $("#tabs .sec-g").removeClass(".active");
     // this (그 아이)의 부모에게 .active 추가
     $(this).parent().addClass("active");
   });

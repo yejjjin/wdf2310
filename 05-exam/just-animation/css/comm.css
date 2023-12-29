@@ -211,18 +211,18 @@
   width: 50%;
 }
 
+.tabs .tab-cont {
+  display: none;
+}
+
 .tabs .sec-tit {
   background-color: lightblue;
   text-align: center;
   padding: 5px 3px;
 }
-/* 비활성화 탭 */
-.tabs .tab-cont {
-  display: none;
-}
+
 /* 활설화 탭 */
 .tabs .active .sec-tit {
-  display: block;
   background-color: midnightblue;
   color: #fff;
 }
@@ -232,6 +232,7 @@
 }
 
 .tabs .tab-cont {
+  /* display: none; */
   position: absolute;
   top: 48px;
   left: 0;
