@@ -354,8 +354,8 @@
   display: flex;
   width: 48%;
   height: 48%;
-  /* background-color: var(--white); */
   justify-content: center;
+  /* background-color: var(--white); */
   background-color: orange;
 }
 
