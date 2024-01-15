@@ -74,12 +74,14 @@
       <div class="circle-g circle2">box2</div>
     </div>
     <div class="area3"></div>
-    <a href="#" class="btn-top">위로</a>
+    <a href="javascript:void()" onclick="myFunction" class="btn-top">위로</a>
 
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
       const hd = document.querySelector("#header");
+      // const topBtn = document.querySelector(".btn-top");
+      // const btnRightHidden = 250;
 
       //   throttle : 너무 많은 스크롤이 있을 때 오류 발생 막아줌 그 범위를 감싼다 (lodash cdn 넣어주기)
       window.addEventListener("scroll", _.throttle(hdScroll, 100));
@@ -115,6 +117,17 @@
           });
         }
       }
+
+      // btnTop 클릭시
+      btnTop.addEventListener("click", function () {
+        // 링크이동 방지
+        // <a href="javascript:void()"></a> 아래 preventDefault와 둘 중 하나 사용
+        evant.preventDefault();
+        gsap.to(window, {
+          scrollTop: 0,
+          duration: 1,
+        });
+      });
 
       gsap.to(".circle1", {
         scrollTrigger: {
