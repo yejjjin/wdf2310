@@ -60,6 +60,7 @@ console.log(height);
 
 // array (배열)
 // 여러개의 값을 순차적으로 나열한 자료형
+// ["값","값","값"]
 
 const animals = ["강아지", "고양이", "토끼"];
 console.log(animals);
@@ -69,3 +70,83 @@ console.log(animals[2]);
 console.log(animals.length);
 // 배열의 마지막 요소를 가져온다
 console.log(animals[animals.length]);
+
+// Object (객체)
+// 여러개의 값을 {key: value} 형태로 저장한 자료형
+// {이름 : 값, 이름 : 값}
+
+const user = {
+  name: "yejin",
+  age: 27,
+};
+
+console.log(user);
+console.log(user.name);
+console.log(user.age);
+console.log(`${user.name}의 나이는 ${user.age}살입니다.`);
+console.log(user.name + "의 나이는" + user.age + "살입니다.");
+
+// 점 표기법
+console.log(user.name, user.age);
+
+// 대괄호 표기법
+console.log(user["name"], user["age"]);
+
+// ex
+const userA = {
+  name: "baby",
+  age: 27,
+};
+const userB = {
+  name: "dalbee",
+  age: 2,
+  parent: userA,
+};
+
+console.log(userB);
+console.log(userB.parent.name);
+
+console.log(userB["parent"]["name"]);
+
+// 배열에 객체 넣기
+const users = [userA, userB];
+console.log(users);
+console.log(users[0]);
+console.log(users[0].name);
+
+// function(함수)
+// 특정 코드를 하나의 명령으로 실행할 수 있게 해주는 자료형
+// function 함수이름(매개변수) {코드}
+
+function printHello() {
+  console.log("hello");
+}
+
+printHello();
+
+function getNumber() {
+  return 123;
+}
+
+console.log(getNumber, typeof getNumber);
+console.log(getNumber());
+
+// Type Conversion (형 변환)
+const h = 1;
+const i = "1";
+
+// 동등 연산자
+console.log(h == i);
+// 일치 연산자
+console.log(h === i);
+
+// Truthy & Falsy (참과 거짓)
+// false, 0, '', null, undefined, NaN
+
+const j = 0;
+
+if (j) {
+  console.log("참");
+} else {
+  console.log("거짓");
+}
