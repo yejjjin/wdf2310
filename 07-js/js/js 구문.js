@@ -262,3 +262,37 @@ for (let user of users) {
 }
 
 // for in문
+// for (변수 in 객체) {실행될 코드}
+const user = {
+  name: "dpwls",
+  age: 27,
+};
+
+console.log(user.name, user.age);
+console.log(user["name "], user["age"]);
+
+for (let key in user) {
+  console.log(key);
+  console.log(user[key]);
+}
+
+let i = 1;
+let sum = 0;
+while (i <= 10) {
+  sum += sum + i;
+  // i = i + 1;
+  // i + 1;
+  i++;
+}
+
+console.log(sum);
+
+// do while문
+// do {실행될 코드} while (조건);
+
+let j = 0;
+
+do {
+  console.log(j);
+  j++;
+} while (j < 10);
