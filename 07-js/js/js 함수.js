@@ -156,3 +156,55 @@ const f = (x) => {
 const g = () => {
   return [1, 2];
 };
+
+// 호출 스케줄링
+// setTimeout : 일정 시간이 지난 후 함수를 실행 하는 함수
+// setTimeout(함수, 시간)
+
+const timer = setTimeout(() => {
+  console.log("hello");
+}, 3000);
+
+const btnStop = document.querySelector("#btnStop");
+// btnStop.addEventListener(이벤트, 함수)
+btnStop.addEventListener("click", () => {
+  console.log("stop");
+  clearTimeout(timer);
+});
+
+// setInterval : 일정 간격으로 함수를 실행하는 함수
+// setInterval(함수, 시간)
+const timer2 = setInterval(() => {
+  console.log("hello");
+}, 3000);
+
+const slideStop = document.querySelector("#slideStop");
+
+slideStop.addEventListener("click", () => {
+  console.log("slidestop");
+  clearInterval(timer2);
+});
+
+// 콜백함수 : 함수의 매개변수로 전달되는 함수를 콜백 함수라고 한다.
+const x = (props) => {
+  props(); //함수 실행
+  console.log(x);
+};
+
+const y = () => {
+  console.log(y);
+};
+
+x(y);
+y();
+
+// setTimeout 콜백함수
+const sum3 = (a, b, c) => {
+  setTimeout(() => {
+    return c(a + b);
+  }, 1000);
+};
+
+sum3(1, 2, (value) => {
+  console.log(value);
+});
