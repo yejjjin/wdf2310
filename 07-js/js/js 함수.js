@@ -202,9 +202,70 @@ y();
 const sum3 = (a, b, c) => {
   setTimeout(() => {
     return c(a + b);
-  }, 1000);
+  }, 2000);
 };
 
 sum3(1, 2, (value) => {
   console.log(value);
 });
+
+// 재귀 함수 : 자기 자신 호출하는 함수
+let i = 0;
+
+const aaa = () => {
+  console.log("aaa");
+  i++;
+  if (i < 5) {
+    aaa();
+  }
+};
+aaa();
+
+// 최고 조상님 찾기 함수
+const userA = { name: "A", parent: null };
+const userB = { name: "B", parent: userA };
+const userC = { name: "C", parent: userB };
+const userD = { name: "D", parent: userC };
+
+const getRootUser = (props) => {
+  if (props.parent) {
+    return getRootUser(props.parent);
+  }
+  return props;
+};
+
+console.log(getRootUser(userD));
+
+// this : 일반함수는 호출 위치에 따라서 this가 정해지고
+// this : 화살표함수는 자신이 선언된 함수 범위에서 this가 정해진다.
+
+const obj = {
+  name: "americano",
+  price: 4000,
+  front: function () {
+    return `$(this.name)의 가격은 $(this.price)원 입니다.`;
+  },
+};
+console.log(obj.front());
+
+function coffee() {
+  this.name = "tea";
+  this.price = 5000;
+
+  return {
+    name: "latte",
+    price: 4500,
+    front: () => {
+      return `${this.name}의 가격은 ${this.price}원 입니다.`;
+    },
+  };
+}
+const coffee = coffee();
+console.log(coffee.front());
+// const obj2 = {
+//   name: "latte",
+//   price: 4500,
+//   front: () => {
+//     return `$(this.name)의 가격은 $(this.price)원 입니다.`;
+//   },
+// };
