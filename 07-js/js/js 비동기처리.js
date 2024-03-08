@@ -22,3 +22,5 @@ function orderCoffee(name, time) {
   }, time);
 }
 orderCoffee("아메리카노", 3000);
+orderCoffee("라뗴", 5000);
+orderCoffee("프라푸치노", 7000);
